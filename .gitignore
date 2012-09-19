@@ -1,0 +1,6 @@
+.metadata/.lock
+.metadata/.log
+.metadata/.mylyn/
+.metadata/version.ini
+.metadata/.plugins/*
+!.metadata/.plugins/org.eclipse.core.runtime/
