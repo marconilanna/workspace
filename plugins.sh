@@ -9,7 +9,7 @@
 
 eclipse_dir="/Applications/Eclipse/"
 eclipse_repo="http://download.eclipse.org/releases/juno/"
-scala_repo="http://download.scala-ide.org/releases-juno-29/milestone/site/"
+scala_repo="http://download.scala-ide.org/sdk/e38/scala210/dev/site/"
 
 eclipse_opt="-nosplash"
 app="org.eclipse.equinox.p2.director"
