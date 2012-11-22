@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #######
-# Shameless stolen from http://scala-ide.org/blog/director-script.html
+# Shamelessly stolen from http://scala-ide.org/blog/director-script.html
 #
 # Additional information:
 # https://github.com/scala-ide/scala-ide/blob/master/eclipse-director.sh
@@ -10,6 +10,7 @@
 eclipse_dir="/Applications/Eclipse/"
 eclipse_repo="http://download.eclipse.org/releases/juno/"
 scala_repo="http://download.scala-ide.org/sdk/e38/scala210/dev/site/"
+scala_ecosystem="http://download.scala-ide.org/ecosystem/e38/scala210/dev/site/"
 
 eclipse_opt="-nosplash"
 app="org.eclipse.equinox.p2.director"
@@ -29,6 +30,9 @@ Options:
     --scala-repo <url>       Scala IDE repository URL
                              Defaults to $scala_repo
 
+    --scala-ecosystem <url>  Scala Ecosystem repository URL
+                             Defaults to $scala_ecosystem
+
 Commands:
     list                     List available plugins
 
@@ -44,17 +48,20 @@ function install()
     echo "Installing from:"
     echo " . $eclipse_repo"
     echo " . $scala_repo"
+    echo " . $scala_ecosystem"
     echo
     $eclipse_dir/eclipse $eclipse_opt \
         -application $app \
-        -repository $eclipse_repo,$scala_repo \
+        -repository $eclipse_repo,$scala_repo,$scala_ecosystem \
         -installIU \
 org.eclipse.jdt.feature.group,\
 org.eclipse.wst.jsdt.feature.feature.group,\
 org.eclipse.wst.web_ui.feature.feature.group,\
 org.eclipse.mylyn.ide_feature.feature.group,\
 org.eclipse.egit.feature.group,\
-org.scala-ide.sdt.feature.feature.group
+org.scala-ide.sdt.feature.feature.group,\
+org.scala-ide.sdt.scalatest.feature.feature.group,\
+org.scalaide.worksheet.feature.feature.group
 }
 
 while [ $# -gt 0 ]; do
@@ -82,10 +89,16 @@ while [ $# -gt 0 ]; do
             shift 2
             ;;
 
+        "--scala-ecosystem")
+            scala_ecosystem=$2
+            echo "Scala Ecosystem repository is $scala_ecosystem"
+            shift 2
+            ;;
+
         "list")
             $eclipse_dir/eclipse $eclipse_opt \
                 -application $app \
-                -repository $eclipse_repo,$scala_repo \
+                -repository $eclipse_repo,$scala_repo,$scala_ecosystem \
                 -list \
                 | grep feature.group \
                 | awk -F "=" '{print $1}'
