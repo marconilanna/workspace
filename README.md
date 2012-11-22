@@ -9,7 +9,7 @@ Copy the `plugins.sh` script and edit it if necessary. Run `./plugins.sh help` f
 * Web Developer Tools
 * Mylyn
 * EGit
-* Scala IDE (2.1 M2 for Scala 2.9)
+* Scala IDE (2.1 M2 for Scala 2.10.0-RC2)
 * ScalaTest
 * Scala Worksheet
 
