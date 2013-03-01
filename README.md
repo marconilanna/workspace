@@ -9,14 +9,16 @@ Copy the `plugins.sh` script and edit it if necessary. Run `./plugins.sh help` f
 * Web Developer Tools
 * Mylyn
 * EGit
-* Scala IDE (2.1 M2 for Scala 2.10.0-RC2)
+* Scala IDE
 * ScalaTest
 * Scala Worksheet
+* Play 2 IDE
 
 *Optional:* Right-click **Eclipse.app** and select **Show Package Contents**. Navigate to **Contents**, **MacOS** and open the file **eclipse.ini**. Add the following after `-vmargs`:
 
 ```
 -server
+-Xss8m
 -Xms100m
 -Xmx1500m
 -XX:MaxPermSize=250m
