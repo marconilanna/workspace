@@ -8,6 +8,7 @@
 # http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/p2_director.html
 
 eclipse_dir="/Applications/Eclipse/"
+
 eclipse_repo="http://download.eclipse.org/releases/juno/"
 scala_repo="http://download.scala-ide.org/sdk/e38/scala210/dev/site/"
 play_repo="http://download.scala-ide.org/play2/nightly_3.0-M_juno_2.10-M/site/"
@@ -65,10 +66,12 @@ org.scalaide.worksheet.feature.feature.group,\
 org.scala-ide.play2.feature.feature.group
 }
 
+if [ $# -eq 0 ]; then usage; fi
+
 while [ $# -gt 0 ]; do
 
     case $1 in
-        "" | "help")
+        "help")
             usage
             ;;
 
@@ -110,10 +113,6 @@ while [ $# -gt 0 ]; do
         "install")
             install
             shift
-            ;;
-
-        *)
-            usage
             ;;
     esac
 done
