@@ -10,8 +10,7 @@
 eclipse_dir="/Applications/Eclipse/"
 
 eclipse_repo="http://download.eclipse.org/releases/juno/"
-scala_repo="http://download.scala-ide.org/sdk/e38/scala210/dev/site/"
-play_repo="http://download.scala-ide.org/play2/nightly_3.0-M_juno_2.10-M/site/"
+scala_repo="http://download.scala-ide.org/sdk/e38/scala210/stable/site"
 
 eclipse_opt="-nosplash"
 app="org.eclipse.equinox.p2.director"
@@ -31,9 +30,6 @@ Options:
     --scala-repo <url>       Scala IDE repository URL
                              Defaults to $scala_repo
 
-    --play-repo <url>        Play 2 IDE repository URL
-                             Defaults to $play_repo
-
 Commands:
     list                     List available plugins
 
@@ -49,11 +45,10 @@ function install()
     echo "Installing from:"
     echo " . $eclipse_repo"
     echo " . $scala_repo"
-    echo " . $play_repo"
     echo
     $eclipse_dir/eclipse $eclipse_opt \
         -application $app \
-        -repository $eclipse_repo,$scala_repo,$play_repo \
+        -repository $eclipse_repo,$scala_repo \
         -installIU \
 org.eclipse.jdt.feature.group,\
 org.eclipse.wst.jsdt.feature.feature.group,\
@@ -93,16 +88,10 @@ while [ $# -gt 0 ]; do
             shift 2
             ;;
 
-        "--play-repo")
-            play_repo=$2
-            echo "Play 2 IDE repository is $play_repo"
-            shift 2
-            ;;
-
         "list")
             $eclipse_dir/eclipse $eclipse_opt \
                 -application $app \
-                -repository $eclipse_repo,$scala_repo,$play_repo \
+                -repository $eclipse_repo,$scala_repo \
                 -list \
                 | grep feature.group \
                 | awk -F "=" '{print $1}' \
