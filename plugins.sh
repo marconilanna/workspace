@@ -58,7 +58,8 @@ org.eclipse.egit.feature.group,\
 org.scala-ide.sdt.feature.feature.group,\
 org.scala-ide.sdt.scalatest.feature.feature.group,\
 org.scalaide.worksheet.feature.feature.group,\
-org.scala-ide.play2.feature.feature.group
+org.scala-ide.play2.feature.feature.group,\
+ch.epfl.insynth.feature.feature.group
 }
 
 if [ $# -eq 0 ]; then usage; fi
