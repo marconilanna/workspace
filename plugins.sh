@@ -56,9 +56,9 @@ org.eclipse.wst.web_ui.feature.feature.group,\
 org.eclipse.mylyn.ide_feature.feature.group,\
 org.eclipse.egit.feature.group,\
 org.scala-ide.sdt.feature.feature.group,\
+org.scala-ide.play2.feature.feature.group,\
 org.scala-ide.sdt.scalatest.feature.feature.group,\
 org.scalaide.worksheet.feature.feature.group,\
-org.scala-ide.play2.feature.feature.group,\
 ch.epfl.insynth.feature.feature.group
 }
 
