@@ -1,7 +1,7 @@
 Installation Instructions
 =========================
 
-Download the [Eclipse 3.8.2 Platform Runtime Binary](http://download.eclipse.org/eclipse/downloads/drops/R-3.8.2-201301310800/#PlatformRuntime) package and extract it into the **Applications** folder.
+Download the [Eclipse 3.8.2 Platform Runtime Binary](http://archive.eclipse.org/eclipse/downloads/drops/R-3.8.2-201301310800/#PlatformRuntime) package and extract it into the **Applications** folder.
 
 Copy the `plugins.sh` script and edit it if necessary. Run `./plugins.sh help` for options or `./plugins.sh install` to download and install the following features:
 
