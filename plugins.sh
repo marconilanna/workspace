@@ -10,7 +10,7 @@
 eclipse_dir="/Applications/Eclipse/"
 
 eclipse_repo="http://download.eclipse.org/releases/juno/"
-scala_repo="http://download.scala-ide.org/sdk/e38/scala210/stable/site"
+scala_repo="http://download.scala-ide.org/sdk/helium/e38/scala210/stable/site"
 
 eclipse_opt="-nosplash"
 app="org.eclipse.equinox.p2.director"
@@ -57,10 +57,9 @@ org.eclipse.mylyn.ide_feature.feature.group,\
 org.eclipse.egit.feature.group,\
 org.scala-ide.sdt.feature.feature.group,\
 org.scala-ide.play2.feature.feature.group,\
-org.scala-ide.sdt.scalatest.feature.feature.group,\
 org.scalaide.worksheet.feature.feature.group,\
 org.scala.tools.eclipse.search.feature.feature.group,\
-ch.epfl.insynth.feature.feature.group
+com.github.dnadolny.javatoscala.feature.feature.group
 }
 
 if [ $# -eq 0 ]; then usage; fi

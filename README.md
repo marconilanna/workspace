@@ -14,7 +14,9 @@ Copy the `plugins.sh` script and edit it if necessary. Run `./plugins.sh help` f
 * Play 2 IDE
 * ScalaTest
 * Scala Worksheet
+* Scala Search
 * InSynth
+* Java to Scala
 
 Download the **SQL Editor** plugin from http://blog.debertshaeuser.com/index.php?page=eclipse-sql-editor and save it into the **Eclipse/dropins** folder.
 
