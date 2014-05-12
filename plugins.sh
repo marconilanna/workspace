@@ -57,6 +57,7 @@ org.eclipse.mylyn.ide_feature.feature.group,\
 org.eclipse.egit.feature.group,\
 org.scala-ide.sdt.feature.feature.group,\
 org.scala-ide.play2.feature.feature.group,\
+org.scala-ide.sdt.scalatest.feature.feature.group,\
 org.scalaide.worksheet.feature.feature.group,\
 org.scala.tools.eclipse.search.feature.feature.group,\
 com.github.dnadolny.javatoscala.feature.feature.group
